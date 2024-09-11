@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "WoW BiS Fetcher",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.icy-veins.com/*"
+  ],
+  "background": {
+    "service_worker": "dist/background.bundle.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.icy-veins.com/*"],
+      "js": [
+        "dist/content_deathknight.bundle.js",
+        "dist/content_demonhunter.bundle.js",
+        "dist/content_druid.bundle.js",
+        "dist/content_evoker.bundle.js",
+        "dist/content_hunter.bundle.js",
+        "dist/content_mage.bundle.js",
+        "dist/content_monk.bundle.js",
+        "dist/content_paladin.bundle.js",
+        "dist/content_priest.bundle.js",
+        "dist/content_rogue.bundle.js",
+        "dist/content_shaman.bundle.js",
+        "dist/content_warlock.bundle.js",
+        "dist/content_warrior.bundle.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

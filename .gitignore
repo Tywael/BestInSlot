@@ -39,3 +39,8 @@ luac.out
 *.x86_64
 *.hex
 
+# chrome extension
+*.crx
+dist/
+node_modules/
+package-lock.json
