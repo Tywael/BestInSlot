@@ -38,7 +38,8 @@ export function extractBiSData(subclasses) {
         if (document.URL.includes(subclass)) {
             data = {
                 subclass: subclass,
-                builds: extractBuilds()
+                builds: extractBuilds(),
+                retrieved_date: new Date().toISOString()
             };
             subclassData = data;
         }

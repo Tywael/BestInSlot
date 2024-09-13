@@ -44,3 +44,8 @@ luac.out
 dist/
 node_modules/
 package-lock.json
+
+venv/
+__pycache__/
+*.pyc
+*.pyo
